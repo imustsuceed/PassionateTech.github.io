@@ -19,3 +19,6 @@ A simple responsive web project built as part of the HNG Internship program.
 - HTML5  
 - CSS3 (Flexbox & Media Queries)  
 - JavaScript (Vanilla)  
+
+##  Live Link
+🔗 [Click here to view my live site on Netlify](https://passion-stage1.netlify.app)
