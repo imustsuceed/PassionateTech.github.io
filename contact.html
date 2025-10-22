@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PassionateTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+           <a class="brand" href="index.html">Passionate<span class="highlight">T</span>ech</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main class="page">
+        <article class="form-card" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <form id="contact-form" action="success.html" method="post" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" type="test" placeholder="Enter your full name" data-testid="test-contact-name" aria-describedby="error-name" required>
+                    <small id="error-name" data-testid="test-contact-error-name" role="alert" aria-live="polite"></small>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="email">Email </label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email address" data-testid="test-contact-error-email" aria-describedby="error-email" required>
+                    <small id="error-email" data-testid="test-contact-error-email" role="alert" aria-live="polite"></small>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Enter subject" data-testid="text-contact-subject" required>
+                    <small id="error-subject" data-testid="test-contact-error-subject" role="alert" aria-live="polite"></small>
+                </div>
+                <br>
+
+                 <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." data-testid="test-contact-message" required></textarea>
+                    <small id="error-message" data-testid="test-contact-error-message" role="alert" aria-live="polite"></small>
+                </div>
+                <br>
+
+                <div class="form-actions">
+                    <button type="submit" data-testid="test-contact-submit">Submit</button>
+                </div>
+            </form>
+            <p id="success-message" class="hidden" data-testid="test-contact-success">
+                Your message was submitted successfully!
+            </p>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

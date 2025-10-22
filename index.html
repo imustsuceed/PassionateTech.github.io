@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassionateTech - Profile Card</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="brand" href="index.html">Passionate<span class="highlight">T</span>ech</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <main class="Page">
+        <article class="card" data-testid="test-profile-card">
+            <div class="profile-container">
+                <figure class="avatar">
+                    <img src="/20241113_162900.jpg" alt="Profile photo of PassionateTech" data-testid="test-user-avatar">
+                </figure>
+                
+                <div class="profile-text">
+                    <header>
+                        <h2 data-testid="test-user-name">PassionateTech</h2>
+                        <p class="role">Frontend Developer in Training</p>
+                    </header>
+                    <p class="bio" data-testid="test-user-bio"> Diligent and passionate frontend developer learning through HNG Tech Intership. I love building responsive and accessible web apps using HTML, CSS, and JavaScript turning ideas into pixel-perfect, user friendly web experiences.</p>
+                    <p class="time">Current time (ms) <span id="time" data-testid="test-user-time"></span></p>
+                </div>
+            </div>
+            <nav class="social" data-testid="test-user-social-links" aria-label="Social links">
+                <ul>
+                    <li><a href="https://twitter.com/udo_malach91354" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+                    <li><a href="https://github.com/imustsucceed" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/malachy-udo" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">Linkedin</a></li>
+                </ul>
+            </nav>
+            <section data-testid="test-user-hobbies" class="list-block">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Coding</li>
+                    <li>Teaching</li>
+                    <li>Reading tech blogs</li>
+                    <li>Preaching Christ crucified</li>
+                </ul>
+            </section>
+            
+            <section data-testid="test-user-dislikes" class="list-block">
+                <h3>Dislikes</h3>
+                
+                <ul>
+                    <li>Laziness</li>
+                    <li>Procrastination</li>
+                    <li>Failure</li>
+                    <li>Slow internet</li>
+                    <li>Listening to ungodly conversation</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> PassionateTech — Built by Malachy</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

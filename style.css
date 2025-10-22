@@ -1,0 +1,413 @@
+/* ===================================
+    Global styles - PassionateTech
+    =================================== */
+    * {
+        margin: 0;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth; 
+    }
+    
+    body {
+        font-family: Poppins, sans-serif;
+        line-height: 1.6;
+        background-color: #f9fbff;
+        color: #1f2937;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+/* ===================================
+      Header & Navigation styles 
+    ======================================*/
+
+.site-header {
+background: #003366;
+color: white;
+padding: 1rem 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+animation-name: myAnimation;
+animation-duration: 10s;
+animation-delay: 2s;
+animation-iteration-count: 2;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+.brand .highlight {
+  color: #ffcc00; /* bright yellow */
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 1.5rem;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* same as your yellow accent */
+  transform: scale(1.2);
+}
+
+
+/*====================================
+   Main layout & cards
+   ===================================*/
+.Page {
+    flex: 1;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card, .form-card, .success-card {
+background: #ffffff;
+border-radius: 12px;
+padding: 2rem;
+max-width: 600px;
+width: 100%;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+/*=========================================
+ Profile page
+===========================================*/
+.avatar img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #003366;
+    opacity: 0.9;
+}
+.avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Add slight zoom on hover */
+.avatar:hover img {
+  transform: scale(1.05);
+}
+
+/* The overlay layer */
+.avatar::after {
+  content: "Frontend Developer";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 204, 0, 0.45);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+}
+
+/* Show overlay on hover */
+.avatar:hover::after {
+  opacity: 1;
+}
+
+
+/*===============================
+   Profile layout - image beside text
+   =============================== */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* Ensure image stays fixed on left */
+.profile-container .avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #003366;
+}
+
+/* Text beside image */
+.profile-container .profile-text {
+  flex: 1;
+}
+
+/* Responsive: Stack image on top for mobile */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .profile-container .avatar img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+}
+.role {
+    color: #003366;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.bio {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.list-block {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.list-block h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+} 
+
+.list-block ul {
+    list-style: square;
+    margin-left: 1.5rem;
+}
+
+/*========================================
+  Contact form page
+  ========================================*/
+  .form-card {
+    text-align: left;
+  }
+
+  label {
+    font-weight: 500;
+    color: #003366;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  input,textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus, textarea {
+    border-color: #003366;
+    outline: none;
+  }
+
+  small[role="alert"] {
+    color: red;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .form-actions {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  button {
+    background: #003366;
+    color: white;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background: #0055aa;
+  }
+
+  
+  .hidden {
+  display: none;
+}
+#success-message {
+  color: green;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+
+
+/*=========================================
+    About page
+    =========================================*/
+    .about-section {
+     margin: 2rem;
+     text-align: left;
+    }
+
+    .about-section h2 {
+        color: #003366;
+        margin-bottom: 0.5rem;
+    }
+    .about-section h3 {
+        color: #003366;
+        margin-bottom: 0.5rem;
+    }
+
+    /*=========================================
+    Success page styling
+    =========================================*/
+    .success-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        background-color: #f9fbff;
+    }
+
+    .success-card {
+        background: #ffffff;
+        border-radius: 16px;
+        text-align: center;
+        padding: 3rem 2rem;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .success-card h2 {
+        color: #0077b6;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .success-card p {
+        color: #333;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn-home {
+        display: inline-block;
+        background: #003366;
+        color: white;
+        text-decoration: none;
+        padding: 0.6rem 1.5rem;
+        font-weight: 500;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        transition: background-color 0.3s ease;
+        animation-name: myAnimation;
+        animation-duration: 5s;
+    }
+    .btn-home:hover {
+        background: #0055aa;
+    }
+    
+    /* The animation code */
+    @keyframes myAnimation {
+    0% {background-color: blue;}
+    25%  {background-color: red;}
+    50%  {background-color: blue;}
+    100% {background-color: #0055aa;}
+    }
+
+    /*=========================================
+    Footer stules
+    =========================================*/
+    .site-footer {
+        background: #003366;
+        color: white;
+        text-align:  center;
+        padding: 1rem 0;
+        margin-top: auto;
+    }
+
+    /*===============================
+   Footer Social Links
+   =============================== */
+   .social ul {
+    list-style: none;         
+    display: flex;    
+    justify-content: center;    
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+   }
+   
+   
+   .social a {
+    text-decoration: none;
+    color: #0077b6;  
+    font-weight: 500;
+    transition: color 0.3s ease;
+   }
+    
+    .social a:hover {
+        color: #023e8a;
+    }
+
+
+    /*=========================================
+     Responsiveness styles
+     =========================================*/
+     @media (max-width: 768px ) {
+        .nav-links {
+            flex-direction: column;
+            gap: 0.8rem;
+            text-align: center;
+        }
+    
+
+        .card, .form-card, .success-card {
+            padding: 1.5rem;
+        }
+
+        .avatar img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+        
